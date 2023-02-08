@@ -17,7 +17,7 @@ import {store} from '../store';
    <div class="container-fluid p-5 bg-warning">
      <div class="input-group mb-3 p-3 ">
        <select v-model="selected" class="custom-select border-light px-3" id="inputGroupSelect01">
-          <option v-for="archetype in store.archetypes" :value="archetype.archetype_name ">
+          <option v-for="archetype in store.archetypes" :value="archetype.archetype_name" @click="getCards()">
             {{ archetype.archetype_name }}
           </option>
        </select>
